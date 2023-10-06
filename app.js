@@ -28,6 +28,10 @@ app.use(morgan('tiny'));
 
 // Making the Upload Folder Public:
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use(
+  '/uploads/images',
+  express.static(path.join(__dirname, 'uploads/images'))
+);
 
 // Routes
 app.use(userRoutes);
